@@ -1,0 +1,36 @@
+{% extends 'AppCoder/index.html' %}
+
+{% block titulo %}
+<h1 class="mb-5">Surf</h1>
+{% endblock titulo %}
+
+<form action= "{% url 'encontrarSurf' %}" method= "get">
+    {% csrf_token %}
+    <table>
+        <p>Ingrese un patron de busqueda<input type= "text" name="buscar" id="buscar"></p>
+    </table >
+    <input type= "submit" value="Buscar">
+</form>     
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Clase</th>
+            <th>Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in surf %}
+        <tr>
+            <td>{{c.id}}</td>
+            <td>{{c.clases}}</td>
+            <td>{{c.valor}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
+
