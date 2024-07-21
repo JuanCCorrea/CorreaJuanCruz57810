@@ -18,3 +18,7 @@ Inicio de sesión (Login)
 Cierre de sesión (Logout)
 Índice:
 Se ha generado un archivo index.modelo para personalizar cada vista en Surf, Body, Horario y Reserva, vinculándolo con sus correspondientes templates.html y rutas.
+
+
+El super user es juanc
+contraseña madaquekua1993
